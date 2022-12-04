@@ -2,7 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'paris' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'auth.php';
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'auth.php';
 
 if (!empty($_SESSION['nickname'])) {
 $nickname = $_SESSION['nickname'] ;
@@ -27,10 +27,10 @@ HTML;
 function nav_menu (string $linkClass = ''): string
 {
   return
-  nav_item('/paris/index.php', 'Accueil', $linkClass) . 
-  nav_item('/paris/depense.php', 'Dépense', $linkClass) .
-  nav_item('/paris/retrait.php', 'Encaisser', $linkClass) .
-  nav_item('/paris/consultation_all.php', 'Consulter', $linkClass);
+  nav_item('index.php', 'Accueil', $linkClass) . 
+  nav_item('depense.php', 'Dépense', $linkClass) .
+  nav_item('retrait.php', 'Encaisser', $linkClass) .
+  nav_item('consultation_all.php', 'Consulter', $linkClass);
 }
 ?>
 <!doctype html>

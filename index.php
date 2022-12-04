@@ -1,14 +1,19 @@
 <?php require 'header.php'; ?>
 
 <?php // connection à la bdd
-try{
-$bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
+// try{
+// $bdd = new PDO('mysql:host=localhost;dbname=tug_mysql', 'tug_mysql', 'eL6Yrt4Y');
+// }
+// catch (Exception $e)
+// {
+//     die('Erreur : ' . $e->getMessage());
+// }
+ 
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'connexionPDO.php';
+
+
 ?>
+
 
 Combien ça me rapporte ? Combien ça m'a coûté ?!
 De nombreux joueurs se posent ces questions... 
@@ -29,7 +34,7 @@ Vous pouvez désormais tenir vos comptes en lignes !
 
 <button class="btn btn-outline-danger" type="button">bouton</button>
 
-<a href="/paris/sign_up.php" >S'incrire</a></br>
+<a href="sign_up.php" >S'incrire</a></br>
 Seconnecter</br>
 index une fois connecté :</br>
 Voulez vous :</br>
@@ -48,6 +53,7 @@ Améliorations possibles :</br>
 - logo</br>
 - nommer les variables en anglais</br>
 - indentations</br>
-
+- refaire le delete_mov</br>
+- faire un fichier makeBDD.php </br>
 
 <?php require 'footer.php'; ?>

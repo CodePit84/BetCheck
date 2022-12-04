@@ -13,14 +13,15 @@ $movement_id = $_GET['id'] ;
 
 
 // connection à la bdd
-try{
-$bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
+// try{
+// $bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');
+// }
+// catch (Exception $e)
+// {
+//     die('Erreur : ' . $e->getMessage());
+// }
 
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'connexionPDO.php';
 
 $reponse = $bdd->query("SELECT * FROM movements WHERE id=$movement_id") ;
 $edit_mov = $reponse->fetch();

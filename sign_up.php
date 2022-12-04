@@ -32,13 +32,15 @@
 $erreur = null;
 
 // connection à la bdd
-try{
-    $bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');
-    }
-    catch (Exception $e)
-    {
-        die('Erreur : ' . $e->getMessage());
-    }
+// try{
+//     $bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');
+//     }
+//     catch (Exception $e)
+//     {
+//         die('Erreur : ' . $e->getMessage());
+//     }
+
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'connexionPDO.php';
 
 // Condition pour empêcher message d'erreur lorsque l'on charge la page vide
 if((!empty($_POST['nickname'])) || (!empty($_POST['email'])) || (!empty($_POST['password'])) || (!empty($_POST['password2']))) { 
@@ -152,7 +154,7 @@ if ((isset($nickname)) && (isset($email)) && (isset($password)) && (!$erreur)) {
 <?php endif ?>
 
 <h2>S'inscrire</h2>
-<form action="/paris/sign_up.php" method="post">
+<form action="sign_up.php" method="post">
     <div class="form-group">
         <label>Pseudo : </label></br><input class="form-control" type="text" name="nickname"></br>
         <label>Email : </label></br><input class="form-control" type="email" name="email"></br>

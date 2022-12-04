@@ -18,6 +18,9 @@ $movement_id = $_GET['id'] ;
 
 
 
+
+// revoir la connection a la bdd pour y incure apres le delete_mov
+
 // connection à la bdd
 try{
 $bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');

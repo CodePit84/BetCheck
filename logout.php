@@ -1,7 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['connected']);
-header('Location: /paris/index.php');
+header('Location: index.php');
 
 
 // Supression des variables de session et de la session
