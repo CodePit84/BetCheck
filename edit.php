@@ -38,7 +38,7 @@ if ($movement < 0) {
     $mov_depense = $movement*-1 ;
     ?>
     <h3>Veuillez modifier votre dépense :</h3>
-    <form action="/paris/consultation_all.php" method="post">
+    <form action="consultation_all.php" method="post">
         <div class="form-group">
             <input class="form-control" type="number" name="up_mouvement_spend" value="<?=$mov_depense?>"></br>
             <input class="form-control" type="date" name="up_date" value="<?=$date?>"></br>
@@ -66,7 +66,7 @@ if ($movement < 0) {
 } else {
     ?>
     <h3>Veuillez modifier votre encaissement (gain) :</h3>
-    <form action="/paris/consultation_all.php" method="post">
+    <form action="consultation_all.php" method="post">
         <div class="form-group">
             <input class="form-control" type="number" name="up_mouvement_earn" value="<?=$movement?>"></br>
             <input class="form-control" type="date" name="up_date" value="<?=$date?>"></br>

@@ -17,7 +17,7 @@ force_connected_user();
 
 
 <h3>Veuillez indiquer le montant de votre encaissement :</h3>
-<form action="/paris/consultation_all.php" method="post">
+<form action="consultation_all.php" method="post">
     <div class="form-group">
         <input class="form-control" type="number" name="encaissement" placeholder="ex : 50"></br>
         <input class="form-control" type="date" name="date_encaissement"></br>

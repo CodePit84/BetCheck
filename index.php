@@ -47,13 +47,13 @@ Améliorations possibles :</br>
 - MDP + de 8 caracteres</br>
 - pseudo de plus de 3 car</br>
 - verif inscription mail</br>
-- editer un mouvement</br>
 - rajout d'heure mouvement</br>
 - tableau mouvements</br>
 - logo</br>
 - nommer les variables en anglais</br>
 - indentations</br>
-- refaire le delete_mov</br>
 - faire un fichier makeBDD.php </br>
+- Inscription erreur header voir en Javascript comme Login.php </br>
+- Pagination de la consultation par page tous les 10 ou 15 mouvements </br>
 
 <?php require 'footer.php'; ?>

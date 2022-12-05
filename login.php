@@ -16,17 +16,8 @@ if(isset($_GET['Message'])){
 }
 ?>
 
-
-
 <?php
 // connection à la bdd
-// try{
-//     $bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');
-//     }
-//     catch (Exception $e)
-//     {
-//         die('Erreur : ' . $e->getMessage());
-//     }
 
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'connexionPDO.php';
 
@@ -59,7 +50,15 @@ if(!empty($_POST['nickname']) || !empty($_POST['password'])) {   // mettre ET pl
             $_SESSION['nickname'] = $nickname;
             $_SESSION['connected'] = 1;                                          //
             // echo "Vous êtes connecté ! Bonjour " . htmlspecialchars($nickname);
-            header('Location: /paris/consultation_all.php');                              //
+            // $success = "Vous êtes connecté ! Bonjour " . htmlspecialchars($nickname);
+            // header('Location: consultation_all.php');
+            // le header location ne fonctionnant car du code html a déjà été généré avant on procède à une redirection JavaScript
+            echo '<script language="Javascript">
+            <!--
+            document.location.replace("consultation_all.php");
+            // -->
+            </script>';
+
 
         }else{
 
@@ -91,7 +90,7 @@ if(!empty($_POST['nickname']) || !empty($_POST['password'])) {   // mettre ET pl
 
 
 <h2>Se connecter</h2>
-<form action="/paris/login.php" method="post">
+<form action="login.php" method="post">
     <div class="form-group">
         <label>Pseudo : </label></br><input class="form-control" type="text" name="nickname"></br>
         <label>Mot de passe : </label></br><input class="form-control" type="password" name="password"></br>

@@ -33,7 +33,7 @@ CREATE TABLE `members` (
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `registration_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -47,7 +47,7 @@ CREATE TABLE `movements` (
   `movement` int(11) NOT NULL,
   `site` varchar(255) DEFAULT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Index pour les tables déchargées

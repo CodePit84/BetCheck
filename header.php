@@ -1,4 +1,5 @@
 <?php
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -7,9 +8,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATO
 if (!empty($_SESSION['nickname'])) {
 $nickname = $_SESSION['nickname'] ;
 }
-?>
 
-<?php
 function nav_item (string $lien, string $titre, string $linkClass = ''): string
 {
   $classe = 'nav-item';
@@ -34,7 +33,7 @@ function nav_menu (string $linkClass = ''): string
 }
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

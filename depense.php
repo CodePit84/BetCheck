@@ -3,24 +3,12 @@ $title = "Dépense";
 $nav = "Dépense";
 require_once 'functions/auth.php';
 force_connected_user();
+require 'header.php'; 
 ?>
-
-<?php require 'header.php'; ?>
-
-
-
-<!-- Veuillez indiquer le montant de votre dépense (ou virement) :
-<form action="/paris/consultation.php" method="post">
-<input type="number" name="depense">
-<input type="date" name="date_depense">
-<button type="submit">Enregister</button>
-</form> -->
-
-
 
 
 <h3>Veuillez indiquer le montant de votre dépense :</h3>
-<form action="/paris/consultation_all.php" method="post">
+<form action="consultation_all.php" method="post">
     <div class="form-group">
         <input class="form-control" type="number" name="depense" placeholder="ex : 50"></br>
         <input class="form-control" type="date" name="date_depense"></br>
