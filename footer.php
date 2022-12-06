@@ -1,4 +1,5 @@
 
+<p class="text-info text-center mt-4 align-text-bottom">Copyright Peter C. © 2022-2023</p>
 
     </main><!-- /.container -->
 

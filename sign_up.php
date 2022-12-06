@@ -129,3 +129,5 @@ if ((isset($nickname)) && (isset($email)) && (isset($password)) && (!$erreur)) {
     </div>
     <button type="submit" class="btn btn-primary">S'incrire</button>
 </form>
+
+<?php require 'footer.php'; ?>

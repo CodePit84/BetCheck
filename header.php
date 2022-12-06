@@ -80,6 +80,6 @@ function nav_menu (string $linkClass = ''): string
           <?php endif; ?>  
         </ul>
       </div>
-    </nav>
+  </nav>
 
     <main role="main" class="container">

@@ -33,3 +33,5 @@ require 'header.php';
     </div>
     <button type="submit" class="btn btn-primary mt-4">Enregister</button>
 </form>
+
+<?php require 'footer.php'; ?>

@@ -80,33 +80,4 @@ $erreur = "Veuillez remplir tous les champs !" ;
 </div>
 <?php endif ?>
 
-
-
-
-
-<?php
-// $password = password_verify($_POST['password'], ) ;
-
-// $req = $bdd->prepare('SELECT id FROM members WHERE nickname = :nickname AND password = :password');
-// $req->execute(array(
-//     'nickname' => $nickname,
-//     'password' => $password
-// ));
-
-// $resultat = $req->fetch();
-
-// if (!$resultat)
-// {
-//     echo 'Identification incorrecte !';
-//     echo $nickname;
-//     echo "</br>";
-//     echo $password;
-//     echo "</br>";
-//     echo '$2y$10$h7jfzUON5Pkxmgno5U4QE.jFvbu3vG7/L9BI9eJLbST82bUuuzDSO' ;
-// } else {
-//     session_start();
-//     $_SESSION['id'] = $resultat['id'];
-//     $_SESSION['nickname'] = $nickname;
-//     echo 'Vous êtes connecté !';
-// }
-?>
+<?php require 'footer.php'; ?>

@@ -121,8 +121,9 @@ echo "</br>" ; -->
 
 <!-- ?> -->
         <!-- <table class="table"> -->
+    <div class="table-responsive">
         <table class="table table-hover">
-            <tr class="table-primary"> <th>Date</th> <th>Montant</th> <th>Lieu</th>  <th>Editer</th><th>Supprimer</th></tr> 
+            <tr class="table-primary"> <th>Date</th> <th>Montant</th> <th>Lieu / Site</th>  <th>Editer</th><th>Supprimer</th></tr> 
         <?php
 
 // Affichage avec la date en FR
@@ -174,7 +175,7 @@ while ($donnees2 = $reponse3->fetch())
 $reponse3->closeCursor(); 
 ?>
         </table>
-
+    </div>
 
 <div class="d-flex justify-content-between mt-4">
     <?php if ($currentPage > 1): ?>
@@ -184,3 +185,5 @@ $reponse3->closeCursor();
         <a href="consultation_all.php?page=<?= $currentPage + 1 ?>" class="btn btn-primary ms-auto">Page suivante &raquo;</a>
     <?php endif ?>
 </div>
+
+<?php require 'footer.php'; ?>

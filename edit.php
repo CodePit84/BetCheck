@@ -88,3 +88,4 @@ if ($movement < 0) {
 
 ?>
 
+<?php require 'footer.php'; ?>
