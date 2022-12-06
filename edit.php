@@ -13,14 +13,6 @@ $movement_id = $_GET['id'] ;
 
 
 // connection à la bdd
-// try{
-// $bdd = new PDO('mysql:host=localhost;dbname=paris_bdd', 'root', '');
-// }
-// catch (Exception $e)
-// {
-//     die('Erreur : ' . $e->getMessage());
-// }
-
 require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'connexionPDO.php';
 
 $reponse = $bdd->query("SELECT * FROM movements WHERE id=$movement_id") ;
@@ -39,13 +31,13 @@ if ($movement < 0) {
     ?>
     <h3>Veuillez modifier votre dépense :</h3>
     <form action="consultation_all.php" method="post">
-        <div class="form-group">
+        <div class="form-group mt-4">
             <input class="form-control" type="number" name="up_mouvement_spend" value="<?=$mov_depense?>"></br>
             <input class="form-control" type="date" name="up_date" value="<?=$date?>"></br>
             <label for="site-select">facultatif :</label>
-                <select class="custom-select" name="up_site" id="site-select">
+                <select class="form-select" name="up_site" id="site-select">
                     <option value="<?=$site?>"><?=$site?></option>
-                    <option value="">Choisissez le type de dépense</option>
+                    <option value="">Choisissez le type :</option>
                     <option value="FDJ">Française des jeux (FDJ)</option>
                     <option value="Winamax">Winamax</option>
                     <option value="Betclick">Betclick</option>
@@ -60,20 +52,20 @@ if ($movement < 0) {
                     <option value="autre">autre...</option>
                 </select>
         </div>
-        <button type="submit" class="btn btn-primary">Enregister</button>
+        <button type="submit" class="btn btn-primary mt-4">Enregister</button>
     </form>
     <?php
 } else {
     ?>
     <h3>Veuillez modifier votre encaissement (gain) :</h3>
     <form action="consultation_all.php" method="post">
-        <div class="form-group">
+        <div class="form-group mt-4">
             <input class="form-control" type="number" name="up_mouvement_earn" value="<?=$movement?>"></br>
             <input class="form-control" type="date" name="up_date" value="<?=$date?>"></br>
             <label for="site-select">facultatif :</label>
-                <select class="custom-select" name="up_site" id="site-select">
+                <select class="form-select" name="up_site" id="site-select">
                     <option value="<?=$site?>"><?=$site?></option>
-                    <option value="">Choisissez le type de dépense</option>
+                    <option value="">Choisissez le type :</option>
                     <option value="FDJ">Française des jeux (FDJ)</option>
                     <option value="Winamax">Winamax</option>
                     <option value="Betclick">Betclick</option>
@@ -88,7 +80,7 @@ if ($movement < 0) {
                     <option value="autre">autre...</option>
                 </select>
         </div>
-        <button type="submit" class="btn btn-primary">Enregister</button>
+        <button type="submit" class="btn btn-primary mt-4">Enregister</button>
     </form>
     <?php
 }

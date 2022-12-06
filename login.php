@@ -91,7 +91,7 @@ if(!empty($_POST['nickname']) || !empty($_POST['password'])) {   // mettre ET pl
 
 <h2>Se connecter</h2>
 <form action="login.php" method="post">
-    <div class="form-group">
+    <div class="form-group mt-4">
         <label>Pseudo : </label></br><input class="form-control" type="text" name="nickname"></br>
         <label>Mot de passe : </label></br><input class="form-control" type="password" name="password"></br>
     </div>

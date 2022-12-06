@@ -100,6 +100,7 @@ if (isset($success)): ?>
 </div>
 <?php endif ?>
 <h3>Consultation</h3>
+</br>
 <?php
 
 
@@ -107,13 +108,21 @@ if (isset($success)): ?>
 $user_id = $_SESSION['id'] ;
 $reponse = $bdd->query("SELECT SUM(movement) AS balance FROM movements WHERE user_id='$user_id'") ;
 $newBalance = $reponse->fetch();
-echo '<h5><strong>Solde : ' . $newBalance['balance'] . '€</strong></h5>';
-$reponse->closeCursor(); 
-echo "</br>" ;
+if ($newBalance['balance'] < 0) { ?>
+    <h5><strong>Solde : <span class="badge rounded-pill bg-danger"><?= $newBalance['balance']?> €</strong></span></h5>   
+<?php } else { ?>
+    <h5><strong>Solde : <span class="badge rounded-pill bg-success">+<?= $newBalance['balance']?> €</strong></span></h5>
+<?php } ?>
+</br>
 
-?>
-        <table class="table">
-            <tr> <th>Date</th> <th>Montant</th> <th>Lieu</th>  <th>Editer</th><th>Supprimer</th></tr> 
+<!-- echo '<h5><strong>Solde : ' . $newBalance['balance'] . '€</strong></h5>';
+$reponse->closeCursor(); 
+echo "</br>" ; -->
+
+<!-- ?> -->
+        <!-- <table class="table"> -->
+        <table class="table table-hover">
+            <tr class="table-primary"> <th>Date</th> <th>Montant</th> <th>Lieu</th>  <th>Editer</th><th>Supprimer</th></tr> 
         <?php
 
 // Affichage avec la date en FR
@@ -123,7 +132,7 @@ while ($donnees2 = $reponse3->fetch())
 {
     
     ?>
-        <tr>
+        <tr class="table-light">
             <td>
                 <?= $donnees2['date2'] ; ?>
             </td>
@@ -172,6 +181,6 @@ $reponse3->closeCursor();
         <a href="consultation_all.php?page=<?= $currentPage - 1 ?>" class="btn btn-primary">&laquo; Page précédente</a>
     <?php endif ?>
     <?php if ($currentPage < $pages): ?>
-        <a href="consultation_all.php?page=<?= $currentPage + 1 ?>" class="btn btn-primary ml-auto">Page suivante &raquo;</a>
+        <a href="consultation_all.php?page=<?= $currentPage + 1 ?>" class="btn btn-primary ms-auto">Page suivante &raquo;</a>
     <?php endif ?>
 </div>

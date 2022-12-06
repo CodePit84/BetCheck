@@ -18,12 +18,12 @@ force_connected_user();
 
 <h3>Veuillez indiquer le montant de votre encaissement :</h3>
 <form action="consultation_all.php" method="post">
-    <div class="form-group">
+    <div class="form-group mt-4">
         <input class="form-control" type="number" name="encaissement" placeholder="ex : 50"></br>
         <input class="form-control" type="date" name="date_encaissement"></br>
         <label for="site-select">facultatif :</label>
-            <select class="custom-select" name="site" id="site-select">
-                <option value="">Choisissez le type de dépense</option>
+            <select class="form-select" name="site" id="site-select">
+                <option value="">Choisissez le type :</option>
                 <option value="FDJ">Française des jeux (FDJ)</option>
                 <option value="Winamax">Winamax</option>
                 <option value="Betclick">Betclick</option>
@@ -38,5 +38,5 @@ force_connected_user();
                 <option value="autre">autre...</option>
             </select>
     </div>
-    <button type="submit" class="btn btn-primary">Enregister</button>
+    <button type="submit" class="btn btn-primary mt-4">Enregister</button>
 </form>

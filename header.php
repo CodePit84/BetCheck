@@ -49,16 +49,20 @@ function nav_menu (string $linkClass = ''): string
         <?php endif ?>
     </title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/starter-template/">
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/starter-template/"> -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/zephyr/bootstrap.css" integrity="sha512-c9+KC+uyA//rVyts4kiSNFVXdNW6BOtxLoqjnj2FYHMllipaaYHz6T3Uf9Z6JkUHhNWD5GVGXbXXDdovk0IZlQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/zephyr/bootstrap.min.css" integrity="sha512-6xTXXOICeHpx2gWokonCPSIdUI/pgnq2e0Q9OoBszhagROWSjZxbeHOAmaRhMAHuVEkPK44/7j5uLmSIxu8EMw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="#">BETCHECK</a>
+  <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+      <!-- <a class="navbar-brand" href="index.php">BETCHECK</a> -->
+      <a class="navbar-brand ms-4" href="index.php"><img class="rounded mx-auto d-block" width="250" src="/pictures/Betcheck_400.png" alt="Betcheck Logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -67,7 +71,8 @@ function nav_menu (string $linkClass = ''): string
         <ul class="navbar-nav mr-auto">
           <?= nav_menu('nav-link') ?>
         </ul>
-        <ul class="navbar-nav">
+        <!-- <ul class="navbar-nav"> -->
+        <ul class="navbar-nav ms-auto">
           <?php if (connected()): ?>
             <li class="nav-item"><a href="logout.php" class="nav-link">Se déconnecter <?= htmlspecialchars($nickname) ?></a></li>
           <?php else : ?>

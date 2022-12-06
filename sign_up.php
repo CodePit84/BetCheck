@@ -121,7 +121,7 @@ if ((isset($nickname)) && (isset($email)) && (isset($password)) && (!$erreur)) {
 
 <h2>S'inscrire</h2>
 <form action="" method="post">
-    <div class="form-group">
+    <div class="form-group mt-4">
         <label>Pseudo : </label></br><input class="form-control" type="text" name="nickname"></br>
         <label>Email : </label></br><input class="form-control" type="email" name="email"></br>
         <label>Mot de passe : </label></br><input class="form-control" type="password" name="password"></br>
