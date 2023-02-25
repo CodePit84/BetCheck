@@ -1,5 +1,9 @@
-
-<p class="text-info text-center mt-4 align-text-bottom">Copyright Peter C. © 2022-2023</p>
+<!-- <footer class="fixed-bottom"> -->
+<div class="d-flex align-content-end flex-wrap"></div>
+<footer>
+<p class="text-info text-center mt-4 my-4 align-text-bottom fixed-bottom">Copyright Peter C. © 2022-2023</p>
+</footer>
+</div>
 
     </main><!-- /.container -->
 

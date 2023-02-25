@@ -63,7 +63,7 @@ function nav_menu (string $linkClass = ''): string
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
       <!-- <a class="navbar-brand" href="index.php">BETCHECK</a> -->
       <a class="navbar-brand ms-4" href="index.php"><img class="rounded mx-auto d-block" width="250" src="/pictures/Betcheck_400.png" alt="Betcheck Logo"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler me-2" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
